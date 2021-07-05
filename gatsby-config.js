@@ -19,6 +19,53 @@ module.exports = {
       // See the theme's README for all available options
       options: {},
     },
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        // Be sure to setup gatsby-source-prismic alongside gatsby-plugin-prismic-previews.
+        repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        // customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        webhookSecret: process.env.PRISMIC_WEBHOOK_SECRET,
+        schemas: {
+          bring_list: require('./src/schemas/bring_list.json'),
+          faq_section: require('./src/schemas/faq_section.json'),
+          faq: require('./src/schemas/faq_fake.json')
+        }
+
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-prismic-previews',
+      options: {
+        // The name of your Prismic repository. This is required.
+        // Example: 'your-repository-name' if your prismic.io address
+        // is 'your-repository-name.prismic.io'.
+        //
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
+
+        // An API access token to your Prismic repository. This is optional.
+        // You can generate an access token in the "API & Security" section of
+        // your repository settings. Setting a "Callback URL" is not necessary.
+        // The token will be listed under "Permanent access tokens".
+        //
+        // If you choose to keep your access token private, do not provide this
+        // plugin option. Editors will be prompted to enter an access token
+        // during a preview session instead, if required.
+        //
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+
+        // Determines the type of Prismic Toolbar that is added to your site.
+        // This defaults to "new". See the "Prismic Toolbar" section of the
+        // plugin documentation for more details.
+        //
+        // Note: The toolbar is required for previews to function and cannot be
+        // disabled.
+        toolbar: 'new',
+      },
+    },
     googleAnalyticsTrackingId && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -60,5 +107,8 @@ module.exports = {
         openAnalyzer: false,
       },
     },
+    // This plugin provides support for automatically optimized images sourced
+    // from your Prismic repository.
+    'gatsby-plugin-image',
   ].filter(Boolean),
 }
