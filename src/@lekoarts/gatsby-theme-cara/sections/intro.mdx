@@ -1,3 +1,20 @@
-# Hi, I'm Jane Doe
-
-I'm creating noice web experiences for the next generation of consumer-facing companies
+export default function Intro({ headline, event_date, facebook_link, location }) {
+  return (
+    <React.Fragment>
+      <h1>{headline}</h1>
+      <h2>{event_date}</h2>
+      <h4>{location}</h4>
+      <p>
+        {(facebook_link && 
+      <a
+        sx={{ variant: `buttons.toggle`, fontWeight: `semibold`, display: `block`, mx: `auto`, mb: 3 }}
+        href={facebook_link}
+        target="_blank"
+      >
+        Awesome on Facebook
+      </a>
+        )}
+      </p>
+    </React.Fragment>
+  );
+}

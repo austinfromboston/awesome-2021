@@ -8,7 +8,9 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-cara/gatsby-config.js
-    siteTitleAlt: `Cara - Gatsby Starter Portfolio`,
+    siteTitle: `Awesome`,
+    siteTitleAlt: `It's Going to be Awesome`,
+    siteDescription: `a party in the forest`,
   },
   flags: {
     FAST_DEV: true,
@@ -25,11 +27,11 @@ module.exports = {
         // Be sure to setup gatsby-source-prismic alongside gatsby-plugin-prismic-previews.
         repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-        // customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
         webhookSecret: process.env.PRISMIC_WEBHOOK_SECRET,
         schemas: {
-          bring_list: require('./src/schemas/bring_list.json'),
-          faq_section: require('./src/schemas/faq_section.json'),
+        //   bring_list: require('./src/schemas/bring_list.json'),
+        //   faq_section: require('./src/schemas/faq_section.json'),
           faq: require('./src/schemas/faq_fake.json')
         }
 
@@ -75,9 +77,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Cara - @lekoarts/gatsby-theme-cara`,
-        short_name: `Cara`,
-        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+        name: `Awesome Event`,
+        short_name: `Awesome`,
+        description: `Party - Redwoods - Costumes`,
         start_url: `/`,
         background_color: `#141821`,
         theme_color: `#f6ad55`,
