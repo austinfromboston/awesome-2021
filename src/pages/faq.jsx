@@ -1,51 +1,46 @@
 import * as React from "react"
-import { Parallax } from "@react-spring/parallax"
 import { graphql } from 'gatsby';
-import Layout from "../components/layout"
-import Hero from "../components/hero"
-import Faq from "../components/faq"
-import Projects from "../components/projects"
-import About from "../components/about"
-import Contact from "../components/contact"
+import Layout from "../@lekoarts/gatsby-theme-cara/components/layout"
+import Header from "../@lekoarts/gatsby-theme-cara/components/faq-page/header"
+import Section from "../@lekoarts/gatsby-theme-cara/components/faq-page/section"
 
-const Cara = ({data}) => (
+const FaqPage = ({data}) => (
   <Layout>
-    <Parallax pages={7}>
-      <Hero data={data.prismicSiteHeader.data} offset={0} factor={1} />
-      <Faq data={data.allPrismicFaqSection.nodes} offset={1} factor={5} />
-      {/* <Projects offset={7} factor={2} /> */}
-      {/* <About offset={16} factor={1} /> */}
-      {/* <Contact offset={17} factor={1} /> */}
-    </Parallax>
+    <div className="faq-page-container" style={{margin: "0 auto;", maxWidth: "1000px"}}>
+      <Header data={data.prismicSiteHeader.data} />
+      {data.allPrismicFaqSection.nodes.map((d, i) => <Section {...d.data} key={i}/>)}
+    </div>
   </Layout>
 )
 
 export const query = graphql`
-  query Hero{
+  query Faq{
     prismicSiteHeader {
       data {
         headline {
           text
           html
+          raw
         }
         event_date {
           text
           html
+          raw
         }
         location {
           text
         }
         ride_board_link {
+          id
           url
         }
         facebook_event_link {
+          id
           url
         }
         tickets_link {
+          id
           url
-        }
-        general_updates {
-          html
         }
       }
     }
@@ -72,4 +67,4 @@ export const query = graphql`
 
 `
 
-export default Cara
+export default FaqPage

@@ -29,6 +29,7 @@ const FaqCard = ({ question, answer, bg }: FaqCardProps) => {
       {question}
     </a>
     <div dangerouslySetInnerHTML={{ __html: answer }}
+    className="faq-answer"
     style={{display: showAnswer ? "block" : "none"}}
     sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}/>
   </div>

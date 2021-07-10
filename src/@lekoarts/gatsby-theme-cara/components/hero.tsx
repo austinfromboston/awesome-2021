@@ -43,7 +43,7 @@ const Hero = ({ data, offset, factor = 1 }: { data: any, offset: number; factor?
     </Divider>
     <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset} factor={factor}>
       <Inner>
-        <Intro headline={data.headline.text} event_date={data.event_date.text} facebook_link={data.facebook_event_link?.url} location={data.location.text}/>
+        <Intro headline={data.headline.text} event_date={data.event_date.text} facebook_link={data.facebook_event_link?.url} location={data.location.text} updates={data.general_updates.html}/>
       </Inner>
     </Content>
   </div>

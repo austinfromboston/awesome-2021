@@ -1,4 +1,5 @@
 require(`dotenv`).config()
+const linkResolver = require('./src/utils/link_resolver');
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
@@ -28,6 +29,7 @@ module.exports = {
         repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        linkResolver,
         webhookSecret: process.env.PRISMIC_WEBHOOK_SECRET,
         schemas: {
         //   bring_list: require('./src/schemas/bring_list.json'),
@@ -86,13 +88,8 @@ module.exports = {
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
+            src: `/hipstercorn.png`,
+            sizes: `400x400`,
             type: `image/png`,
           },
         ],

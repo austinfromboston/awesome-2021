@@ -68,6 +68,11 @@ const theme = merge(tailwind, {
         },
       },
     },
+    ".faq-answer": {
+      a: {
+        "background-color": "grey"
+      }
+    },
     p: {
       fontSize: [1, 2],
       letterSpacing: `-0.003em`,
