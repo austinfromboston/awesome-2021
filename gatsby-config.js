@@ -17,7 +17,7 @@ module.exports = {
     siteHeadline: "awesome 2021",
     siteLanguage: "en-US", 
     siteImage: "https://itsgoingtobefuckingawesome.com/banner.jpg",
-    icon: "https://itsgoingtobefuckingawesome.com/hipstercorn.jpg",
+    // icon: "https://itsgoingtobefuckingawesome.com/hipstercorn.jpg",
     author: "team awesome"
   },
   flags: {
