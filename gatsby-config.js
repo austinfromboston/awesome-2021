@@ -12,6 +12,13 @@ module.exports = {
     siteTitle: `Awesome`,
     siteTitleAlt: `It's Going to be Awesome`,
     siteDescription: `a party in the forest`,
+    siteUrl: "https://itsgoingtobefuckingawesome.com",
+    siteAuthor: "team awesome",
+    siteHeadline: "awesome 2021",
+    siteLanguage: "en-US", 
+    siteImage: "https://itsgoingtobefuckingawesome.com/banner.jpg",
+    icon: "https://itsgoingtobefuckingawesome.com/hipstercorn.jpg",
+    author: "team awesome"
   },
   flags: {
     FAST_DEV: true,
