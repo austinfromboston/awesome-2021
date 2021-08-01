@@ -1,27 +1,31 @@
-export default function Intro({ headline, event_date, facebook_link, location, updates }) {
+export default function Intro({
+  headline,
+  event_date,
+  tickets_link,
+  location,
+  updates,
+}) {
   return (
     <React.Fragment>
       <h2>{headline}</h2>
       <h4>{event_date}</h4>
       <h4>{location}</h4>
       <p>
-        {(facebook_link && 
-      <a
-        sx={{ variant: `buttons.toggle`, fontWeight: `semibold`, display: `block`, mx: `auto`, mb: 3 }}
-        href={facebook_link}
-        target="_blank"
-      >
-        Awesome on Facebook
-      </a>
+        {tickets_link && (
+          <a
+            sx={{
+              variant: `buttons.primary`,
+              backgroundColor: `primary`,
+              display: `inline-block`,
+            }}
+            href={tickets_link.url}
+            target="_blank"
+          >
+            Register Now
+          </a>
         )}
       </p>
-      <p dangerouslySetInnerHTML={{__html: updates}}></p>
-      <p>
-        <a href="/faq">Printable FAQ</a>
-      </p>
-      <p>
-        <a href="/bring">What to Bring</a>
-      </p>
+      <p dangerouslySetInnerHTML={{ __html: updates }}></p>
     </React.Fragment>
   );
 }

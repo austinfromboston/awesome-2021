@@ -138,6 +138,17 @@ const theme = merge(tailwind, {
       py: 2,
       ml: 3,
     },
+    action: {
+      color: `white`,
+      border: `1px solid white`,
+      backgroundColor: `primary`,
+      padding: `3px 4px`,
+      cursor: `pointer`,
+      alignSelf: `center`,
+      px: 3,
+      py: 2,
+      ml: 3,
+    }
   },
   texts: {
     bigger: {
