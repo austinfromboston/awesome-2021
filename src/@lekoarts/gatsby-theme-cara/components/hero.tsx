@@ -23,7 +23,6 @@ const Hero = ({ data, offset, factor = 1 }: { data: any, offset: number; factor?
         <Svg icon="dancing_dress" hiddenMobile width={16} color="icon_blue" left="80%" top="10%" />
         <Svg icon="tree1" width={12} stroke color="icon_brightest" left="90%" top="50%" />
         <Svg icon="sasquatch" width={16} color="icon_red" left="70%" top="90%" />
-        <Svg icon="cookie" width={16} stroke color="icon_darkest" left="30%" top="65%" />
         <Svg icon="dancing_stick" width={16} stroke color="icon_pink" left="28%" top="15%" />
         <Svg icon="tree2" width={6} color="icon_darkest" left="75%" top="10%" />
         <Svg icon="dancing_ponytail" hiddenMobile width={8} color="icon_darkest" left="45%" top="10%" />
