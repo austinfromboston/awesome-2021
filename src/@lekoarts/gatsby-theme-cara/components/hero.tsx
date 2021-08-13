@@ -15,7 +15,6 @@ const Hero = ({ data, offset, factor = 1 }: { data: any, offset: number; factor?
     </script>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
-        <Svg icon="cookie" hiddenMobile width={48} stroke left="10%" top="20%" />
         <Svg icon="dancing_duo" width={48} color="icon_red" left="60%" top="70%" />
         <Svg icon="fireworks" width={12} color="icon_darkest" left="60%" top="15%" />
       </UpDown>
@@ -23,6 +22,7 @@ const Hero = ({ data, offset, factor = 1 }: { data: any, offset: number; factor?
         <Svg icon="dancing_dress" hiddenMobile width={16} color="icon_blue" left="80%" top="10%" />
         <Svg icon="tree1" width={12} stroke color="icon_brightest" left="90%" top="50%" />
         <Svg icon="sasquatch" width={16} color="icon_red" left="70%" top="90%" />
+        <Svg icon="cookie" hiddenMobile width={48} stroke left="10%" top="20%" />
         <Svg icon="dancing_stick" width={16} stroke color="icon_pink" left="28%" top="15%" />
         <Svg icon="tree2" width={6} color="icon_darkest" left="75%" top="10%" />
         <Svg icon="dancing_ponytail" hiddenMobile width={8} color="icon_darkest" left="45%" top="10%" />
@@ -30,6 +30,7 @@ const Hero = ({ data, offset, factor = 1 }: { data: any, offset: number; factor?
       <Svg icon="tree2" hiddenMobile width={24} color="icon_darker" left="5%" top="70%" />
       <Svg icon="fireworks" width={6} color="icon_darkest" left="4%" top="20%" />
       <Svg icon="sasquatch" width={12} color="icon_darkest" left="50%" top="60%" />
+      <Svg icon="cookie" width={8} color="icon_darkest" left="95%" top="90%" />
       <Svg icon="dancing_dress" hiddenMobile width={24} color="icon_darker" left="40%" top="80%" />
       <Svg icon="dancing_stick" width={8} stroke color="icon_darker" left="25%" top="5%" />
       <Svg icon="tree1" width={64} color="icon_green" left="90%" top="5%" />
