@@ -10,6 +10,7 @@ export default function Intro({
       <h2>{headline}</h2>
       <h4>{event_date}</h4>
       <h4>{location}</h4>
+      <p dangerouslySetInnerHTML={{ __html: updates }}></p>
       <p>
         {tickets_link && (
           <a
@@ -25,7 +26,6 @@ export default function Intro({
           </a>
         )}
       </p>
-      <p dangerouslySetInnerHTML={{ __html: updates }}></p>
     </React.Fragment>
   );
 }
