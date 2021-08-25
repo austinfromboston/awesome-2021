@@ -49,6 +49,8 @@ const Hero = ({ data, offset, factor = 1 }: { data: any, offset: number; factor?
         <a href="/bring">What to Bring</a>
         <br/>
         {data.facebook_event_link && <a href={data.facebook_event_link?.url}>Awesome on Facebook</a>}
+        <br/>
+        {data.ride_board_link && <a href={data.ride_board_link?.url}>Coordinate a Ride</a>}
       </Inner>
     </Content>
   </div>
