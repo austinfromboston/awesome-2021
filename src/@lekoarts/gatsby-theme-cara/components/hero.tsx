@@ -6,7 +6,8 @@ import Content from "../elements/content"
 import Svg from "./svg"
 import { UpDown, UpDownWide } from "../styles/animations"
 // @ts-ignore
-import Intro from "../sections/intro.mdx"
+//import Intro from "../sections/intro.mdx"
+import Intro from "../components/intro2"
 
 const Hero = ({ data, offset, factor = 1 }: { data: any, offset: number; factor?: number }) => (
   <div>
@@ -44,13 +45,15 @@ const Hero = ({ data, offset, factor = 1 }: { data: any, offset: number; factor?
       <Inner>
         <Intro headline={data.headline.text} event_date={data.event_date.text} location={data.location.text} updates={data.general_updates.html} tickets_link={data.tickets_link} />
         <br/>
-        <a href="/faq">Printable FAQ</a>
-        <br/>
-        <a href="/bring">What to Bring</a>
-        <br/>
-        {data.facebook_event_link && <a href={data.facebook_event_link?.url}>Awesome on Facebook</a>}
-        <br/>
-        {data.ride_board_link && <a href={data.ride_board_link?.url}>Coordinate a Ride</a>}
+        <div className="useful-links">
+          <a href="/faq">Printable FAQ</a>
+          <br/>
+          <a href="/bring">What to Bring</a>
+          <br/>
+          {data.facebook_event_link && <a href={data.facebook_event_link?.url}>Awesome on Facebook</a>}
+          <br/>
+          {data.ride_board_link && <a href={data.ride_board_link?.url}>Coordinate a Ride</a>}
+        </div>
       </Inner>
     </Content>
   </div>

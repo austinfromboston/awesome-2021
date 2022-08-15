@@ -1,8 +1,8 @@
-require(`dotenv`).config()
-const linkResolver = require('./src/utils/link_resolver');
+require(`dotenv`).config();
+const linkResolver = require("./src/utils/link_resolver");
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
-const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
+const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID;
 
 module.exports = {
   siteMetadata: {
@@ -15,10 +15,10 @@ module.exports = {
     siteUrl: "https://itsgoingtobefuckingawesome.com",
     siteAuthor: "team awesome",
     siteHeadline: "awesome 2021",
-    siteLanguage: "en-US", 
+    siteLanguage: "en-US",
     siteImage: "https://itsgoingtobefuckingawesome.com/banner.jpg",
     // icon: "https://itsgoingtobefuckingawesome.com/hipstercorn.jpg",
-    author: "team awesome"
+    author: "team awesome",
   },
   flags: {
     FAST_DEV: true,
@@ -30,7 +30,7 @@ module.exports = {
       options: {},
     },
     {
-      resolve: 'gatsby-source-prismic',
+      resolve: "gatsby-source-prismic",
       options: {
         // Be sure to setup gatsby-source-prismic alongside gatsby-plugin-prismic-previews.
         repositoryName: process.env.GATSBY_PRISMIC_REPOSITORY_NAME,
@@ -39,15 +39,14 @@ module.exports = {
         linkResolver,
         webhookSecret: process.env.PRISMIC_WEBHOOK_SECRET,
         schemas: {
-        //   bring_list: require('./src/schemas/bring_list.json'),
-        //   faq_section: require('./src/schemas/faq_section.json'),
-          faq: require('./src/schemas/faq_fake.json')
-        }
-
+          //   bring_list: require('./src/schemas/bring_list.json'),
+          //   faq_section: require('./src/schemas/faq_section.json'),
+          faq: require("./src/schemas/faq_fake.json"),
+        },
       },
     },
     {
-      resolve: 'gatsby-plugin-prismic-previews',
+      resolve: "gatsby-plugin-prismic-previews",
       options: {
         // The name of your Prismic repository. This is required.
         // Example: 'your-repository-name' if your prismic.io address
@@ -74,7 +73,7 @@ module.exports = {
         //
         // Note: The toolbar is required for previews to function and cannot be
         // disabled.
-        toolbar: 'new',
+        toolbar: "new",
       },
     },
     googleAnalyticsTrackingId && {
@@ -113,8 +112,28 @@ module.exports = {
         openAnalyzer: false,
       },
     },
+    /*
+    {
+      resolve: "gatsby-theme-cloudinary-gallery",
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+      },
+    },
+    {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        maxResults: 22,
+      },
+    },
+    */
     // This plugin provides support for automatically optimized images sourced
     // from your Prismic repository.
-    'gatsby-plugin-image',
+    "gatsby-plugin-image",
   ].filter(Boolean),
-}
+};

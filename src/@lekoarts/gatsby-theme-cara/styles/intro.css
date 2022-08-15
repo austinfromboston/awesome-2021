@@ -1,0 +1,34 @@
+.h2-up {
+  font-size: 3em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.h4-up {
+  font-size: 2em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+.register-button {
+  display: inline-block;
+  background-color: #cd2222;
+  color: white;
+  padding: 14px;
+  font-weight: bold;
+  border-color: brown;
+}
+
+a {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.useful-links {
+  display: inline-block;
+  padding: 20px;
+  background-color: brown;
+}
+
+.useful-links a {
+  color: white;
+}
