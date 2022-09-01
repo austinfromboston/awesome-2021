@@ -1,20 +1,25 @@
-import * as React from "react"
-import { graphql } from 'gatsby';
-import Layout from "../@lekoarts/gatsby-theme-cara/components/layout"
-import Header from "../@lekoarts/gatsby-theme-cara/components/faq-page/header"
-import BringList from "../@lekoarts/gatsby-theme-cara/components/bring-list"
+import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../@lekoarts/gatsby-theme-cara/components/layout";
+import Header from "../@lekoarts/gatsby-theme-cara/components/faq-page/header";
+import BringList from "../@lekoarts/gatsby-theme-cara/components/bring-list";
 
-const BringPage = ({data}) => (
+const BringPage = ({ data }) => (
   <Layout>
-    <div className="bring-page-container" style={{margin: "0 auto;", maxWidth: "1000px"}}>
+    <div
+      className="bring-page-container"
+      style={{ margin: "0 auto;", maxWidth: "1000px" }}
+    >
       <Header data={data.prismicSiteHeader.data} />
-      {data.allPrismicBringList.nodes.map((d, i) => <BringList {...d.data} key={i}/>)}
+      {data.allPrismicBringList.nodes.map((d, i) => (
+        <BringList {...d.data} key={i} />
+      ))}
     </div>
   </Layout>
-)
+);
 
 export const query = graphql`
-  query Bring{
+  query Bring {
     prismicSiteHeader {
       data {
         headline {
@@ -34,6 +39,12 @@ export const query = graphql`
           id
           url
         }
+        schedule_link {
+          url
+        }
+        meals_link {
+          url
+        }
         facebook_event_link {
           id
           url
@@ -44,7 +55,7 @@ export const query = graphql`
         }
       }
     }
-    allPrismicBringList(sort: {fields: data___list_index}) {
+    allPrismicBringList(sort: { fields: data___list_index }) {
       nodes {
         data {
           list_body {
@@ -65,7 +76,6 @@ export const query = graphql`
       }
     }
   }
+`;
 
-`
-
-export default BringPage
+export default BringPage;

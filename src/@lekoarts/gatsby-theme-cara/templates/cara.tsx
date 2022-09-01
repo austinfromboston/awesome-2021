@@ -43,6 +43,12 @@ export default function Cara() {
               ride_board_link {
                 url
               }
+              schedule_link {
+                url
+              }
+              meals_link {
+                url
+              }
               facebook_event_link {
                 url
               }
@@ -76,6 +82,21 @@ export default function Cara() {
               }
             }
           }
+          allPrismicMusicalGuestBlurb {
+            nodes {
+              data {
+                band_blurb {
+                  text
+                }
+                band_image {
+                  url
+                }
+                band_timing {
+                  text
+                }
+              }
+            }
+          }
           allPrismicFaqSection(sort: { fields: data___section_index }) {
             nodes {
               data {
@@ -99,14 +120,23 @@ export default function Cara() {
       `}
       render={(data) => {
         return (
-        <Layout>
-          <Parallax pages={9}>
-            <Hero data={data.prismicSiteHeader.data} offset={0} factor={1} />
-            <Gallery data={data.allPrismicGallery.nodes} offset={1} factor={3} />
-            <Faq data={data.allPrismicFaqSection.nodes} offset={2} factor={5} />
-          </Parallax>
-        </Layout>
-      )}}
+          <Layout>
+            <Parallax pages={11}>
+              <Hero data={{...data.prismicSiteHeader.data,band: data.allPrismicMusicalGuestBlurb.nodes}} offset={0} factor={2} />
+              <Gallery
+                data={data.allPrismicGallery.nodes}
+                offset={2}
+                factor={3}
+              />
+              <Faq
+                data={data.allPrismicFaqSection.nodes}
+                offset={2}
+                factor={5}
+              />
+            </Parallax>
+          </Layout>
+        );
+      }}
     />
   );
 }

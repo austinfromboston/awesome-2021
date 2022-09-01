@@ -34,6 +34,12 @@ export const query = graphql`
           id
           url
         }
+        schedule_link {
+          url
+        }
+        meals_link {
+          url
+        }
         facebook_event_link {
           id
           url

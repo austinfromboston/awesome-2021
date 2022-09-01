@@ -1,0 +1,37 @@
+{
+  "Main": {
+    "band_name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label": "Band Name"
+      }
+    },
+    "band_blurb": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+        "label": "band_blurb"
+      }
+    },
+    "band_timing": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+        "label": "band_timing",
+        "placeholder": "Banda Sin Nombre is performing Friday night"
+      }
+    },
+    "band_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 400,
+          "height": 300
+        },
+        "thumbnails": [],
+        "label": "band_image"
+      }
+    }
+  }
+}

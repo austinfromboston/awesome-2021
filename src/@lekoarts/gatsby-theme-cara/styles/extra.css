@@ -4,6 +4,20 @@
 .gallery-image-block {
     display: inline-grid;
 }
+
+.musical-guests {
+    margin-top: 200px;
+    padding: 20px;
+    background: rgba(100, 100, 100, 0.8);
+    color: white;
+}
+.musical-guests p.band-info {
+    font-size: 1rem;
+}
+.musical-guests img.band-img {
+    max-width: 80vmin;
+}
+    font-size: 1rem;
  .fun-thumb {
     display: block;
     margin: 0 auto;
