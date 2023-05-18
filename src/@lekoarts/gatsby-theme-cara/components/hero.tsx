@@ -195,7 +195,7 @@ const Hero = ({
             <a href={data.facebook_event_link?.url}>Awesome on Facebook</a>
           )}
         </div>
-        {data.band.map(band => <BandBlurb data={band.data}/>)}
+        {/*{data.band.map(band => <BandBlurb data={band.data}/>)}*/}
      </Inner>
     </Content>
   </div>
