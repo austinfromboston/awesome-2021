@@ -15,7 +15,7 @@ export default function Intro({
       <h4>{location}</h4>
       <p dangerouslySetInnerHTML={{ __html: updates }}></p>
       <p>
-        {tickets_link && (
+        {tickets_link && tickets_link.id && (
           <a
             sx={{
               variant: `buttons.primary`,

@@ -8,7 +8,7 @@ import { UpDown, UpDownWide } from "../styles/animations";
 // @ts-ignore
 //import Intro from "../sections/intro.mdx"
 import Intro from "../components/intro2";
-import BandBlurb from "../components/bandBlurb";
+// import BandBlurb from "../components/bandBlurb";
 
 const Hero = ({
   data,
