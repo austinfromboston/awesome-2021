@@ -181,17 +181,17 @@ const Hero = ({
           <br />
           <a href="/bring">What to Bring</a>
           <br />
-          {data.schedule_link && (
+          {data.schedule_link && data.schedule_link.id && (
             <a href={data.schedule_link?.url}>The Evolving Schedule</a>
           )}
           <br />
-          {data.meals_link && <a href={data.meals_link?.url}>Meal Planning</a>}
+          {data.meals_link && data.meals_link.id && <a href={data.meals_link?.url}>Meal Planning</a>}
           <br />
-          {data.ride_board_link && (
+          {data.ride_board_link && data.ride_board_link.id && (
             <a href={data.ride_board_link?.url}>Coordinate a Ride</a>
           )}
           <br />
-          {data.facebook_event_link && (
+          {data.facebook_event_link && data.facebook_event_link.id && (
             <a href={data.facebook_event_link?.url}>Awesome on Facebook</a>
           )}
         </div>
