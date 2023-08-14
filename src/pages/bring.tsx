@@ -8,7 +8,7 @@ const BringPage = ({ data }) => (
   <Layout>
     <div
       className="bring-page-container"
-      style={{ margin: "0 auto;", maxWidth: "1000px" }}
+      style={{ margin: "0 auto", maxWidth: "1000px" }}
     >
       <Header data={data.prismicSiteHeader.data} />
       {data.allPrismicBringList.nodes.map((d, i) => (
